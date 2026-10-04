@@ -1,0 +1,120 @@
+Train / Val: 48000 12000
+Official test set held out untouched: 10000
+Model: "sequential"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ Layer (type)                    ┃ Output Shape           ┃       Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ conv2d (Conv2D)                 │ (None, 26, 26, 32)     │           320 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ max_pooling2d (MaxPooling2D)    │ (None, 13, 13, 32)     │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ conv2d_1 (Conv2D)               │ (None, 11, 11, 64)     │        18,496 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ max_pooling2d_1 (MaxPooling2D)  │ (None, 5, 5, 64)       │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ flatten (Flatten)               │ (None, 1600)           │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dropout (Dropout)               │ (None, 1600)           │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense (Dense)                   │ (None, 64)             │       102,464 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dense_1 (Dense)                 │ (None, 10)             │           650 │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+ Total params: 121,930 (476.29 KB)
+ Trainable params: 121,930 (476.29 KB)
+ Non-trainable params: 0 (0.00 B)
+Epoch 1/20
+375/375 - 29s - 76ms/step - accuracy: 0.7762 - loss: 0.6199 - val_accuracy: 0.8575 - val_loss: 0.4032
+Epoch 2/20
+375/375 - 32s - 86ms/step - accuracy: 0.8566 - loss: 0.4001 - val_accuracy: 0.8787 - val_loss: 0.3375
+Epoch 3/20
+375/375 - 19s - 51ms/step - accuracy: 0.8712 - loss: 0.3544 - val_accuracy: 0.8880 - val_loss: 0.3098
+Epoch 4/20
+375/375 - 21s - 56ms/step - accuracy: 0.8813 - loss: 0.3253 - val_accuracy: 0.8940 - val_loss: 0.2901
+Epoch 5/20
+375/375 - 21s - 55ms/step - accuracy: 0.8882 - loss: 0.3028 - val_accuracy: 0.8967 - val_loss: 0.2810
+Epoch 6/20
+375/375 - 24s - 64ms/step - accuracy: 0.8958 - loss: 0.2806 - val_accuracy: 0.9028 - val_loss: 0.2660
+Epoch 7/20
+375/375 - 24s - 63ms/step - accuracy: 0.9012 - loss: 0.2691 - val_accuracy: 0.9044 - val_loss: 0.2613
+Epoch 8/20
+375/375 - 24s - 63ms/step - accuracy: 0.9050 - loss: 0.2543 - val_accuracy: 0.9062 - val_loss: 0.2560
+Epoch 9/20
+375/375 - 20s - 54ms/step - accuracy: 0.9090 - loss: 0.2444 - val_accuracy: 0.9112 - val_loss: 0.2478
+Epoch 10/20
+375/375 - 21s - 57ms/step - accuracy: 0.9119 - loss: 0.2361 - val_accuracy: 0.9121 - val_loss: 0.2428
+Epoch 11/20
+375/375 - 18s - 48ms/step - accuracy: 0.9162 - loss: 0.2241 - val_accuracy: 0.9135 - val_loss: 0.2380
+Epoch 12/20
+375/375 - 17s - 45ms/step - accuracy: 0.9197 - loss: 0.2157 - val_accuracy: 0.9148 - val_loss: 0.2344
+Epoch 13/20
+375/375 - 15s - 40ms/step - accuracy: 0.9229 - loss: 0.2052 - val_accuracy: 0.9138 - val_loss: 0.2381
+Epoch 14/20
+375/375 - 18s - 47ms/step - accuracy: 0.9248 - loss: 0.2006 - val_accuracy: 0.9149 - val_loss: 0.2360
+Epoch 15/20
+375/375 - 17s - 46ms/step - accuracy: 0.9290 - loss: 0.1922 - val_accuracy: 0.9191 - val_loss: 0.2273
+Epoch 16/20
+375/375 - 13s - 35ms/step - accuracy: 0.9307 - loss: 0.1842 - val_accuracy: 0.9176 - val_loss: 0.2280
+Epoch 17/20
+375/375 - 14s - 36ms/step - accuracy: 0.9316 - loss: 0.1787 - val_accuracy: 0.9190 - val_loss: 0.2290
+Epoch 18/20
+375/375 - 19s - 51ms/step - accuracy: 0.9349 - loss: 0.1740 - val_accuracy: 0.9190 - val_loss: 0.2280
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/sklearn/linear_model/_logistic.py:1135: FutureWarning: 'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' set to its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', and C=np.inf instead of penalty=None.
+  warnings.warn(
+
+=== Training vs validation (for Table in Section 4) ===
+Model                        Train loss  Train acc  Val loss  Val acc
+Logistic Regression C=0.1        0.3682     0.8726    0.3956   0.8633
+CNN                              0.1476     0.9465    0.2273   0.9191
+
+=== CNN: per class precision / recall / F1 (validation) ===
+              precision    recall  f1-score   support
+
+ T-shirt/top      0.884     0.889     0.887      1200
+     Trouser      0.998     0.978     0.988      1200
+    Pullover      0.892     0.858     0.874      1200
+       Dress      0.917     0.926     0.922      1200
+        Coat      0.825     0.886     0.855      1200
+      Sandal      0.981     0.985     0.983      1200
+       Shirt      0.771     0.754     0.762      1200
+     Sneaker      0.966     0.966     0.966      1200
+         Bag      0.987     0.980     0.983      1200
+  Ankle boot      0.975     0.969     0.972      1200
+
+    accuracy                          0.919     12000
+   macro avg      0.920     0.919     0.919     12000
+weighted avg      0.920     0.919     0.919     12000
+
+Top 5 confusions for CNN (true -> predicted : count)
+  Shirt -> T-shirt/top : 111
+  Shirt -> Coat : 95
+  T-shirt/top -> Shirt : 91
+  Pullover -> Coat : 73
+  Coat -> Shirt : 72
+
+=== Logistic Regression: per class precision / recall / F1 (validation) ===
+              precision    recall  f1-score   support
+
+ T-shirt/top      0.802     0.843     0.822      1200
+     Trouser      0.981     0.963     0.972      1200
+    Pullover      0.771     0.761     0.766      1200
+       Dress      0.848     0.867     0.857      1200
+        Coat      0.760     0.790     0.775      1200
+      Sandal      0.941     0.949     0.945      1200
+       Shirt      0.675     0.618     0.645      1200
+     Sneaker      0.934     0.934     0.934      1200
+         Bag      0.955     0.955     0.955      1200
+  Ankle boot      0.957     0.954     0.956      1200
+
+    accuracy                          0.863     12000
+   macro avg      0.863     0.863     0.863     12000
+weighted avg      0.863     0.863     0.863     12000
+
+Top 5 confusions for Logistic Regression (true -> predicted : count)
+  Shirt -> T-shirt/top : 168
+  Pullover -> Coat : 127
+  Shirt -> Pullover : 120
+  Shirt -> Coat : 117
+  Pullover -> Shirt : 110
+
+Test set not touched. Set FINAL_MODEL, then set EVAL_ON_TEST = True after model selection.

@@ -1,0 +1,15 @@
+Train / validation: 48000 / 12000
+Test files opened: no
+C,train_log_loss,train_accuracy,val_log_loss,val_accuracy,converged
+0.01,0.43249564,0.85568750,0.43055461,0.85616667,True
+0.1,0.36819678,0.87260417,0.39563422,0.86333333,True
+1.0,0.33488361,0.88166667,0.41224959,0.86175000,True
+10.0,0.31988391,0.88591667,0.44672222,0.85500000,False
+ConvergenceWarning for C=10.0: lbfgs failed to converge after 1000 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=1000).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
